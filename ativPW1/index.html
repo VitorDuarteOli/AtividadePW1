@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Validação de Formulário </title>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		#main{
+			border:1px solid black;
+			width:175px;
+			height:270px;
+			margin:auto;
+			padding: 2px;
+			margin-top:250px;
+			text-align: center;
+			background-color: #ADD8E6;
+		}
+		label{
+			font-size:18px;
+			width: 100%;
+			height: 30px;
+			color:blue;
+		}
+		input{
+			width: 100%;
+			height: 30px;
+			border:1px solid pink;
+			border-radius: 10px;
+		}
+		button{
+			width: white;
+			background-color: #B0C4DE;
+			border:1px solid black;
+			height: 25px;
+			border-radius: 5px;
+
+		}
+
+	</style>
+</head>
+<body>
+	<div id="main"> 
+		<form>
+			<p>
+				 <strong>
+			<label for="nota1"> Digite a nota 01  </label>
+			<input type="número" name="nota1" id="nota1" placeholder=" Digite um número:" required>
+		</p>
+		<p>
+			<label for="nota2"> Digite a nota 02 </label>
+			<input type="número" name="nota2" id= "nota2"placeholder=" Digite um numero:" required>
+			<p>
+			</p>
+      </strong>         
+ </button>
+</p>
+<p>
+	<strong>
+	<label for="result"> Resultado: </label>
+	<input type="text" name="result" id="result" readonly>
+	
+</strong>
+<p>
+	<strong>
+<button type="button" onclick="calMedia()">
+	           Calcular media
+	       </button> 
+	   </p> 
+	</strong>
+</p>
+</form>
+</div>
+<script>
+	function calMedia(){
+	let nota1= document.getElementById("nota1").value;
+	let nota2= document.getElementById("nota2").value;
+	if( nota1==!''&& not){
+	nota1=parseFloat(nota1);
+    nota2=parseFloat(nota2);
+
+	let media = (nota1+nota2)/2;
+
+	 document.getElementById("result").value = media;
+	}else{
+		alert("preencha os campos!");
+}
+}
+	</script>
+</body>
+</html>
